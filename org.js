@@ -10,21 +10,21 @@ class Staff{
 class Executive extends Staff{
     constructor(staffId,staffName,startDate,staffLevel){
         super(staffId,staffName,startDate,staffLevel);
-        //this.staff_level="Executive";
+       this.staff_level="Executive";
     }
 }//end of class Executive
 
 class Manager extends Staff{
     constructor(staffId,staffName,startDate,staffLevel){
         super(staffId,staffName,startDate,staffLevel);
-        //this.staff_level="Manager";
+        this.staff_level="Manager";
     }
 }// end of class Manager
 
 class Worker extends Staff{
     constructor(staffId,staffName,startDate,staffLevel,division,manager){
         super(staffId,staffName,startDate,staffLevel);
-        //this.staff_level="Worker";
+        this.staff_level="Worker";
         this.division=division;
         this.manager=manager;
     }
@@ -37,9 +37,9 @@ class Division{
 }// end of Dicision class
 
 // creating Executive
-const execitive1=new Executive('E001','Exc1','12-03-2023','Executive');
-const executive2=new Executive('E002','Exc2','14-09-2020','Executive');
-const executive3=new Executive('E003','Exc3','09-09-2022','Executive');
+const execitive1=new Executive('E001','Exc1','12-03-2023');
+const executive2=new Executive('E002','Exc2','14-09-2020');
+const executive3=new Executive('E003','Exc3','09-09-2022');
 
 //creating Division
 
@@ -51,9 +51,9 @@ const division5=new Division('Division5',executive3);
 
 //creating Manger
 
-const manager1=new Manager('M001','Mng1','13-09-2023','Manager');
-const manager2=new Manager('M002','Mng2','13-10-2000','Manager');
-const manager3=new Manager('M003','Mng3','31-09-2022','Manager');
+const manager1=new Manager('M001','Mng1','13-09-2023');
+const manager2=new Manager('M002','Mng2','13-10-2000');
+const manager3=new Manager('M003','Mng3','31-09-2022');
 
 // creating Workers
 
@@ -71,4 +71,5 @@ console.log(worker1.staff_name);
 console.log(worker1.division.div_name);
 console.log("==========");
 console.log(worker6.division.div_name);
-console.log(worker6.division.div_exective);
+console.log(worker6.division.div_exective.staff_name);
+console.log(worker1.manager.staff_name);
